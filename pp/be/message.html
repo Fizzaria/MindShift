@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Chat Page</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <img src="image.png" alt="MindConnect Logo">
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- Chat Container -->
+<div class="chat-container">
+  <div class="chat-messages" id="chatMessages">
+    <!-- Messages will appear here -->
+  </div>
+  <div class="chat-input">
+    <textarea id="messageInput" rows="1" placeholder="Type a message..."></textarea>
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://twitter.com" target="_blank">Twitter</a> |
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+  <p>© 2024 MindConnect. All rights reserved.</p>
+</footer>
+
+<script>
+  function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const chatMessages = document.getElementById('chatMessages');
+    
+    const userMessage = messageInput.value.trim();
+    if (userMessage === '') return;
+
+    // Add user message
+    const userMessageElement = document.createElement('div');
+    userMessageElement.classList.add('message', 'user');
+    userMessageElement.innerHTML = <span>${userMessage}</span>;
+    chatMessages.appendChild(userMessageElement);
+
+    // Auto-scroll to the bottom
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Clear input
+    messageInput.value = '';
+
+    // Add bot reply after a delay
+    setTimeout(() => {
+      const botMessageElement = document.createElement('div');
+      botMessageElement.classList.add('message', 'bot');
+      botMessageElement.innerHTML = <span>Bot: I'm here to assist you!</span>;
+      chatMessages.appendChild(botMessageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>

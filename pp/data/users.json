@@ -1,0 +1,4 @@
+[
+  { "id": 1, "username": "student1", "type": "free" },
+  { "id": 2, "username": "student2", "type": "premium" }
+]

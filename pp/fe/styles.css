@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f7f9fc;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2b3d63;
+}
+
+.navbar .logo {
+  width: 120px;
+}
+
+.navbar nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar nav a:hover {
+  color: #80b3ff;
+}
+
+.cta-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;
+  color: #2b3d63;
+  border: 2px solid #2b3d63;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #2b3d63;
+  color: #ffffff;
+  border-color: #80b3ff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #4b6da8, #2b3d63);
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #2b3d63;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #80b3ff;
+  color: #ffffff;
+}
+
+/* Features Section */
+.features {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #2b3d63, #4b6da8);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:hover {
+  background: linear-gradient(to right, #4b6da8, #2b3d63);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #2b3d63;
+  color: white;
+}
+
+footer .social-icons {
+  margin: 1rem 0;
+}
+
+.icon-link {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #4b6da8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon-link i {
+  margin-right: 0.5rem;
+}
+
+.icon-link:hover {
+  background-color: #80b3ff;
+  transform: scale(1.1);
+}
+
+/* Chatbot Bubble */
+.chatbot-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #2b3d63;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chatbot-bubble:hover {
+  transform: scale(1.1);
+  background-color: #4b6da8;
+}
+
+.chatbot-icon {
+  width: 35px;        /* Ensure width and height are the same for a perfect circle */
+  height: 35px;
+  border-radius: 50%;  /* Makes the icon round */
+  object-fit: cover;   /* Ensures the image scales well to fit the circle */
+}
+/* Make the logo round */
+.navbar .logo {
+  width: 120px; /* Adjust size as needed */
+  height: 120px; /* Ensure the height matches the width for a perfect circle */
+  border-radius: 50%; /* This makes it round */
+  object-fit: cover; /* Ensures the image scales well to fit the circular shape */
+}
+
